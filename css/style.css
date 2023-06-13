@@ -17,3 +17,12 @@ h1{
     margin-top: 1rem;
     font-size: 35px;
 }
+
+li{
+    color: crimson;
+}
+
+.completed{
+    color: green;
+    text-decoration: line-through;
+}

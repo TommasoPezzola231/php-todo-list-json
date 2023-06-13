@@ -23,7 +23,7 @@
             <ul>
                 
                 <template v-for="(element, index) in toDoList">
-                    <li>{{element.text}}</li>
+                    <li :class="(element.done) ? `completed` : ``">{{element.text}}</li>
                 </template>
             
             </ul>
