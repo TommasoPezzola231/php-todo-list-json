@@ -1,30 +1,8 @@
 <?php 
-    $toDoList = [
-        [
-            "text" => "Fare la spesa",
-            "done" => true
-        ],
-        [
-            "text" => "Portare a spasso il cane",
-            "done" => true
-        ],
-        [
-            "text" => "Stendere i panni",
-            "done" => false
-        ],
-        [
-            "text" => "Chiamare Giovanni",
-            "done" => true
-        ],
-        [
-            "text" => "Prenotare il ristorante",
-            "done" => false
-        ]
-    ];
+    $toDoList = file_get_contents("dati.json");
 
     header("Content-Type: application/json");
 
-    $list = json_encode($toDoList);
+    echo $toDoList;
 
-    echo $list
 ?>

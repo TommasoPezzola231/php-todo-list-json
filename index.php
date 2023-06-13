@@ -14,7 +14,13 @@
         
         <div class="container">
             <h1>To Do List</h1>
+            <ul>
+                
+                <template v-for="(element, index) in toDoList">
+                    <li>{{element.text}}</li>
+                </template>
             
+            </ul>
         </div>
 
     </div>
