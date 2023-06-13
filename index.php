@@ -14,6 +14,12 @@
         
         <div class="container">
             <h1>To Do List</h1>
+            <div>
+                <input type="text" placeholder="Aggiungi alla lista" v-model="newTask">
+                <button type="submit" @click="Aggiungi">Aggiungi</button>
+            </div>
+
+
             <ul>
                 
                 <template v-for="(element, index) in toDoList">
