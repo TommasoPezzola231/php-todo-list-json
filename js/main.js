@@ -17,9 +17,8 @@ createApp ({
                     headers: { 'Content-Type': 'multipart/form-data'}
                 }).then(r => {
                     
-                console.log(r.data)
-                //this.toDoList.push({text: this.newTask, done: false})  
-
+                console.log(r)
+                this.newTask = ""
               })
         }
     },
