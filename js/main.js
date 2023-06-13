@@ -12,12 +12,13 @@ createApp ({
         Aggiungi() {
             
 
-            axios.post(this.API, {text: this.newTask, done: false},
+            axios.post(this.API, { newTask: {text: this.newTask, done: false} },
                 {
                     headers: { 'Content-Type': 'multipart/form-data'}
                 }).then(r => {
                     
                 console.log(r)
+                this.toDoList = r.data
                 this.newTask = ""
               })
         }
