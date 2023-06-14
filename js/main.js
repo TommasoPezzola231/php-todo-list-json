@@ -21,6 +21,13 @@ createApp ({
                 this.toDoList = r.data
                 this.newTask = ""
               })
+        },
+        changeStatus(element) {
+            if (element.done == true) {
+                return element.done = false
+            } else if (element.done == false) {
+                return element.done = true
+            }
         }
     },
     mounted() {

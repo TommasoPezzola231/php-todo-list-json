@@ -20,6 +20,7 @@ h1{
 
 li{
     color: crimson;
+    cursor: pointer;
 }
 
 .completed{

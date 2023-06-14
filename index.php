@@ -23,7 +23,7 @@
             <ul>
                 
                 <template v-for="(element, index) in toDoList">
-                    <li :class="(element.done) ? `completed` : ``">{{element.text}}</li>
+                    <li @click="changeStatus(element)" :class="(element.done) ? `completed` : ``">{{element.text}}</li>
                 </template>
             
             </ul>
