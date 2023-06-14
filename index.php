@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     
@@ -23,7 +24,10 @@
             <ul>
                 
                 <template v-for="(element, index) in toDoList">
-                    <li @click="changeStatus(element)" :class="(element.done) ? `completed` : ``">{{element.text}}</li>
+                    <li :class="(element.done) ? `completed` : ``">
+                        <span @click="changeStatus(index)">{{element.text}}</span>
+                        
+                    </li>
                 </template>
             
             </ul>

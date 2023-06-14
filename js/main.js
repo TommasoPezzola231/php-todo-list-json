@@ -23,11 +23,14 @@ createApp ({
               })
         },
         changeStatus(element) {
-            if (element.done == true) {
-                return element.done = false
-            } else if (element.done == false) {
-                return element.done = true
-            }
+            axios.post(this.API, { status: element} ,
+                {
+                    headers: { 'Content-Type': 'multipart/form-data'}
+                }).then(r => {
+                    
+                console.log(r)
+                this.toDoList = r.data
+              })
         }
     },
     mounted() {

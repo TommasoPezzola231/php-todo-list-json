@@ -9,6 +9,11 @@
         $toDoList = json_encode($list);
         file_put_contents("dati.json", $toDoList);
         
+    } else if (isset($_POST["status"]) && $_POST["status"] != "") {
+
+        $list[$_POST["status"]]["done"] = !$list[$_POST["status"]]["done"];
+        $toDoList = json_encode($list);
+        file_put_contents("dati.json", $toDoList);
     }
     
     $toDoList = json_encode($list);
